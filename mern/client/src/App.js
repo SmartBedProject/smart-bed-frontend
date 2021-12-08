@@ -1,31 +1,27 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 
-// We use Route in order to define the different routes of our application
-
-// We import all the components we need in our app
-import Navbar from "./components/Navbar";
-
-
-
+import Navbar from "./components/MainNavbar";
 import Home from "./components/Home";
 import Notes from "./components/Notes";
 import CreateNote from "./components/CreateNote";
 
 const App = () => {
   return (
-    // Navbar
-    // Home
-    // Notes
-    // Create Note
-    <div>
-        <Navbar />
-        <Routes>
-            <Route exact path="/" component={Home} />
-            <Route exact path="/notes" component={Notes} />
-            <Route exact path="/create" component={CreateNote} />
-        </Routes>
-    </div>
+    <>
+      <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+            integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+            crossorigin="anonymous"
+      />
+      <Navbar />
+      <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route path="/notes" element={<Notes />} />
+          <Route path="/create" element={<CreateNote />} />
+      </Routes>
+    </>
   );
 };
 

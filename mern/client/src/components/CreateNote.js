@@ -2,7 +2,7 @@ import React from "react";
 
 function CreateNote(props) {
     return (
-        <div className="create-note">
+        <div className="container">
             <input
                 name="title"
                 onChange={props.handleChange}
